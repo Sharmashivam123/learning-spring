@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:thymeleaf.org">
+<head>
+<meta charset="UTF -8">
+<titile>London Hotel : Guests</titile>
+</head>
+
+<body>
+<table>
+	<tr>
+		<td>Last Name</td>
+		<td>First Name</td>
+		<td>Email Address</td>
+		<td>Phone Number</td>
+	</tr>
+	
+	<tr th:each="guest:${guests}">
+	<td th:text="${guest.lastName}"></td>
+	<td th:text="${guest.firstName}"></td>
+	<td th:text="${guest.emailAddress}"></td>
+	<td th:text="${guest.phoneNumber}"></td>
+	</tr>
+</table>
+</body>
+</html>
